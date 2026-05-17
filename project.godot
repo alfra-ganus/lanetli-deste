@@ -11,17 +11,26 @@ config_version=5
 [application]
 
 config/name="Lanetli Deste"
-run/main_scene="uid://v1k8ji1j6irk"
+run/main_scene="uid://1cto8fl1bla"
 config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://c6mm3ghnv2tfj"
+
 [display]
 
-window/stretch/scale=6.0
+window/size/viewport_height=700
+window/stretch/mode="viewport"
 
 [dotnet]
 
 project/assembly_name="Lanetli Deste"
+
+[gui]
+
+theme/custom_font="uid://bwxuo1dddd42w"
 
 [physics]
 
