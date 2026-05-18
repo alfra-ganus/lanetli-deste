@@ -129,7 +129,7 @@ text = "tasarımlar"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1194391032]
 stream = ExtResource("4_vmxnu")
-volume_db = 15.0
+volume_db = 24.0
 autoplay = true
 
 [connection signal="button_down" from="VBoxContainer/start" to="." method="_on_button_button_down"]

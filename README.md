@@ -1,4 +1,2 @@
 # lanetli-deste
-ll
  .
-...

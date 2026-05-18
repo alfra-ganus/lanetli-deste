@@ -36,8 +36,6 @@ public partial class GameManager
 	private string save_path= "user://game_stats.cfg";
 	public static int etkilesim;
 
-	public static float dbValueglobal;
-
 	public static List<int> iksir_value=new List<int> {2,3,4,5,6,7,8,9,10};
 
 	public static List<int> silah_value=new List<int> {2,3,4,5,6,7,8,9,10,11,12,13,14};

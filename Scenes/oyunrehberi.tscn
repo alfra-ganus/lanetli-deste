@@ -33,6 +33,27 @@ shadow_color = Color(0, 0, 0, 0.53333336)
 shadow_size = 2
 shadow_offset = Vector2(2, 2)
 
+[sub_resource type="FontFile" id="FontFile_l2oyu"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+
 [node name="Oyunrehberi" type="Control" unique_id=1385812894]
 layout_mode = 3
 anchors_preset = 15
@@ -109,5 +130,69 @@ theme_override_colors/font_color = Color(0.7176471, 0.35686275, 0.36862746, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_teg54")
 text = "⏎"
+
+[node name="Label" type="Label" parent="." unique_id=385482668]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.027
+anchor_bottom = 0.033
+offset_left = 121.0
+offset_top = 108.0
+offset_right = 1121.896
+offset_bottom = 708.9
+theme_override_colors/font_color = Color(0.7176471, 0.35686275, 0.37254903, 1)
+theme_override_fonts/font = SubResource("FontFile_l2oyu")
+theme_override_font_sizes/font_size = 21
+text = "​🏰 ZİNDANDAN KAÇIŞ: OYUN REHBERİ
+​🗡️ Temel Amaç
+​ Karanlık zindanlardan kurtulmak için 
+tüm düşmanları alt etmeli ve
+ anahtarları toplayarak ilerlemelisin. 
+Tüm düşmanlar bittiğinde 
+özgürlüğüne kavuşacaksın!
+​⚔️ Savaş ve Güç Dengesi
+​Zindanda hayatta kalmak için 
+matematiğini iyi kullanmalısın:
+​ Saldırı Koşulu: Bir düşmana saldırabilmen
+ için Silah Gücünün, düşmanın 
+gücünden yüksek olması gerekir.
+ ​Örnek: Düşman gücü 12 ise,
+ senin gücün en az 13 olmalıdır.
+​ Can Kaybı: Düşmanlara vurduğunda 
+zafer kazanırsın 
+ama bu seni yorar ve Canın azalır. 
+Canın biterse oyun sona erer!
+"
+
+[node name="Label2" type="Label" parent="." unique_id=922688121]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.027
+anchor_bottom = 0.033
+offset_left = 606.0
+offset_top = 85.0
+offset_right = 1606.896
+offset_bottom = 685.9
+theme_override_colors/font_color = Color(0.7176471, 0.35686275, 0.37254903, 1)
+theme_override_fonts/font = SubResource("FontFile_l2oyu")
+theme_override_font_sizes/font_size = 21
+text = "🧪 Güçlendiriciler
+​ Zindanda bulduğun eşyaları toplayarak ,
+avantaj sağla:
+​ İksir: Canını artırır. Ölmemek için canını 
+sürekli yüksek tutmalısın.
+​ Silah: Silah gücünü artırır. 
+Daha güçlü düşmanlarla savaşmanı sağlar.
+​🗝️ Odalar ve İlerleme
+​Vuruş Hakkı: Her zindan odasında en fazla 
+3 vuruş yapma hakkın var. 
+Hamlelerini planlı yap!
+​ Anahtar: Odadaki düşmanları temizledikten
+ sonra Anahtara basarak bir 
+sonraki zindana geçebilirsin.
+​Merdiven: Eğer bir şeyi unuttuysan veya geri 
+dönmen gerekirse,
+merdivenleri kullanarak dönmelisinsin.
+"
 
 [connection signal="pressed" from="geri" to="." method="_on_geri_pressed"]

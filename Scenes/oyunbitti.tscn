@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bcbiw57smwknq" path="res://Scripts/Oyunbitti.cs" id="1_hhlob"]
 [ext_resource type="FontFile" uid="uid://bwxuo1dddd42w" path="res://Assets/GrapeSoda.ttf" id="2_8hjht"]
+[ext_resource type="AudioStream" uid="uid://ctn4lisff1qid" path="res://Assets/audley_fergine-game-over-classic-206486.mp3" id="3_3flle"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8hjht"]
 bg_color = Color(0.28235295, 0.16078432, 0.039215688, 1)
@@ -64,7 +65,7 @@ theme_override_colors/font_shadow_color = Color(0.28258756, 0.16222122, 0.039745
 theme_override_constants/shadow_outline_size = 13
 theme_override_fonts/font = ExtResource("2_8hjht")
 theme_override_font_sizes/font_size = 120
-text = "KAYBETTİNİZ!"
+text = "OYUN BİTTİ"
 
 [node name="Button" type="Button" parent="." unique_id=266656617]
 layout_mode = 1
@@ -86,5 +87,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_8hjht")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_owj0d")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3a2i4")
 text = "skorlar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=367394373]
+stream = ExtResource("3_3flle")
+volume_db = 10.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
