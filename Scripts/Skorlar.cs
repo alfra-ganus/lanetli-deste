@@ -1,11 +1,34 @@
 using Godot;
+using LanetliDeste;
 using System;
+using System.Text;
 
 public partial class Skorlar : Control
 {
-	// Called when the node enters the scene tree for the first time.
+	[Export] public Label istatistik;
 	public override void _Ready()
 	{
+
+		if(istatistik != null)
+		{
+			StringBuilder sb=new StringBuilder();
+			var gecmis=GameManager.Instance.SkorGecmis;
+			if (gecmis.Count == 0)
+			{
+				sb.AppendLine("Henüz skorunuz yok");
+			}
+			else
+			{
+				for(int i = 0; i < gecmis.Count; i++)
+				{
+					sb.AppendLine($"{i+1}. {gecmis[i]} Puan");
+				}
+			}
+
+			istatistik.Text=sb.ToString();
+		}
+
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

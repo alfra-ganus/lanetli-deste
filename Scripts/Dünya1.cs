@@ -62,7 +62,10 @@ public partial class Dünya1 : Node2D
 			GetNode<Button>("key").Hide();
 		}
 
-		if(GameManager.gameon==false) GetTree().ChangeSceneToFile("res://Scenes/kazandın.tscn");
+		if(GameManager.gameon==false){
+			GameManager.Instance.YeniSkor();
+			GetTree().ChangeSceneToFile("res://Scenes/kazandın.tscn");
+		}
 	}
 
 	public void _on_button_pressed()

@@ -36,6 +36,6 @@ public partial class Oyunbitti : Control
 	public void _on_button_pressed()
 	{
 		GameManager.gameon=true;
-		GetTree().ChangeSceneToFile("res://Scenes/ana_menu.tscn");
+		GetTree().ChangeSceneToFile("res://Scenes/skorlar.tscn");
 	}
 }

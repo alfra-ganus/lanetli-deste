@@ -38,9 +38,11 @@ public partial class Player : CharacterBody2D
 			}
 
 			if(mod=="iksir"){
-			Can+=deger;
+				GameManager.top_iksir++;
+				Can+=deger;
 			}
 			if (mod=="enemy"){
+				GameManager.top_enemy++;
 				if(MevcutSilah>0){
 					if (MevcutSilah > deger)
 					{
@@ -62,6 +64,7 @@ public partial class Player : CharacterBody2D
 			}
 			if (Can <=0)
 			{
+				GameManager.Instance.YeniSkor();
 				GetTree().ChangeSceneToFile("res://Scenes/oyunbitti.tscn");
 			} 
 			GameManager.canglobal=Can;
