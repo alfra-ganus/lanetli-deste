@@ -2,6 +2,7 @@ using Godot;
 using LanetliDeste;
 using System;
 
+namespace LanetliDeste;
 public partial class Ayarlar : Control
 {
 	// Called when the node enters the scene tree for the first time.
@@ -20,9 +21,9 @@ public partial class Ayarlar : Control
 
 	public void value_changed(double value)
 	{
-		int busIndex = AudioServer.GetBusIndex("music");
-		float dbValue=Mathf.LinearToDb((float)value);//bu işlem için Mathf metodunun gerektiği ai yardımıyla bulunmuştur.
-		AudioServer.SetBusVolumeDb(busIndex,dbValue);
+		int busIndex = AudioServer.GetBusIndex("Master");
+		GameManager.dbValueglobal=Mathf.LinearToDb((float)value);//bu işlem için Mathf metodunun gerektiği ai yardımıyla bulunmuştur.
+		AudioServer.SetBusVolumeDb(busIndex,GameManager.dbValueglobal);
 	}
 
 	public void _on_geri_pressed()
@@ -35,18 +36,12 @@ public partial class Ayarlar : Control
 		GameManager.Instance.Reset();
 	}
 
-	public void _on_ekran_toggled(bool ekran_pressed)
-	{
-		/*var mevcutMod=DisplayServer.WindowGetMode();
+	
 
-		if (mevcutMod == DisplayServer.WindowMode.Fullscreen)
+	public void _on_ses_drag_started()
+	{}
+		public void _on_ekran_toggled(bool ekran_pressed)
 		{
-			DisplayServer.WindowSetMode(DisplayServer.WindowMode.Windowed);
-		}
-		else
-		{
-			DisplayServer.WindowSetMode(DisplayServer.WindowMode.Fullscreen);
-		}*/
 		if (ekran_pressed)
 		{
 			DisplayServer.WindowSetMode(DisplayServer.WindowMode.Fullscreen);
@@ -55,5 +50,6 @@ public partial class Ayarlar : Control
 		{
 			DisplayServer.WindowSetMode(DisplayServer.WindowMode.Windowed);
 		}
+	
 	}
 }

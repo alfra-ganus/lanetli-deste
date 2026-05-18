@@ -64,7 +64,7 @@ theme_override_colors/font_shadow_color = Color(0.28258756, 0.16222122, 0.039745
 theme_override_constants/shadow_outline_size = 13
 theme_override_fonts/font = ExtResource("2_8hjht")
 theme_override_font_sizes/font_size = 120
-text = "OYUN BİTTİ"
+text = "KAYBETTİNİZ!"
 
 [node name="Button" type="Button" parent="." unique_id=266656617]
 layout_mode = 1
