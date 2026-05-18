@@ -17,7 +17,7 @@ config/icon="res://Assets/icon.svg"
 
 [audio]
 
-buses/default_bus_layout="uid://c6mm3ghnv2tfj"
+buses/default_bus_layout=""
 
 [display]
 
