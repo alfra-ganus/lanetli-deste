@@ -53,4 +53,6 @@ public partial class Spawner : Node2D
 	if(SpawnSceneleri.Count==0) GameManager.gameon=false;
 	}
 
+	
+
 }
