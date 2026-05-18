@@ -20,7 +20,7 @@ Zindanda ilerlerken avantaj sağlamak için toplayabileceğiniz eşyalar:
 * **İksir:** Canınızı artırır. Hayatta kalmak için can seviyenizi sürekli yüksek tutmalısınız.
 * **Silah:** Silah gücünüzü artırarak daha güçlü düşmanlarla savaşabilmenizi sağlar. Savaştığınız düşman silah dayanıklılığınızı gittikçe azaltır.
 
-  <img width="1158" height="701" alt="resim" src="https://github.com/user-attachments/assets/224ece8e-f30d-4fcb-8b88-7da974cd8399" />
+<img width="1158" height="701" alt="resim" src="https://github.com/user-attachments/assets/224ece8e-f30d-4fcb-8b88-7da974cd8399" />
 
 
 ### 🔑 Odalar ve İlerleme
