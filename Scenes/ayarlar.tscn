@@ -205,5 +205,6 @@ scale = Vector2(2.3, 2.3)
 
 [connection signal="pressed" from="geri" to="." method="_on_geri_pressed"]
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
+[connection signal="drag_started" from="ses" to="." method="_on_ses_drag_started"]
 [connection signal="value_changed" from="ses" to="." method="_on_ses_value_changed"]
 [connection signal="toggled" from="ekran" to="." method="_on_ekran_toggled"]

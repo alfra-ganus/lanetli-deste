@@ -5,14 +5,18 @@ using System.ComponentModel;
 
 namespace LanetliDeste;
 
+
 public partial class AnaMenu : Control
 {
+	private static AudioStreamPlayer a;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
-		
+		a=GetNode<AudioStreamPlayer>("AudioStreamPlayer");
+		int busIndex = AudioServer.GetBusIndex("Master");
+		AudioServer.SetBusVolumeDb(busIndex,GameManager.dbValueglobal);
 	}
+	
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)

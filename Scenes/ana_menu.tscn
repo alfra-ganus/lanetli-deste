@@ -129,8 +129,8 @@ text = "tasarımlar"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1194391032]
 stream = ExtResource("4_vmxnu")
+volume_db = 15.0
 autoplay = true
-bus = &"music"
 
 [connection signal="button_down" from="VBoxContainer/start" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
