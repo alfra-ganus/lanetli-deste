@@ -5,27 +5,6 @@ using System.ComponentModel;
 
 namespace LanetliDeste;
 
-public static class GameManager
-{
-	public static bool gameon=true;
-	public static Player playerglobal;
-
-	public static int canglobal;
-
-	public static int silahglobal;
-
-	public static Iksir iksirglobal;
-	public static int zindan;
-
-	public static int etkilesim;
-
-	public static List<int> iksir_value=new List<int> {2,3,4,5,6,7,8,9,10};
-
-	public static List<int> silah_value=new List<int> {2,3,4,5,6,7,8,9,10,11,12,13,14};
-
-	public static List<int> enemy_value=new List<int> {2,3,4,5,6,7,8,9,10,11,12,13,14};
-
-}
 public partial class AnaMenu : Control
 {
 	// Called when the node enters the scene tree for the first time.

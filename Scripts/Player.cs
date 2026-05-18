@@ -26,34 +26,58 @@ public partial class Player : CharacterBody2D
 
 	public void CanUpdate(int deger,string mod)
 	{
-		if(mod=="iksir"){
-			Can+=deger;
-		}
-		if (mod=="enemy"){
-			if(MevcutSilah>0){
-				if (MevcutSilah > deger)
-				{
-					MevcutSilah=deger;
-					deger=0;
-				}
-				
-				else
-				{
-					deger-=MevcutSilah;
-					MevcutSilah=0;
-				}
-			}
-			Can-=deger;
-			GameManager.silahglobal=MevcutSilah;
-		}
-		if (Can>20){
-			Can=20;
-		}
-		if (Can <=0)
+		try
 		{
-			GetTree().ChangeSceneToFile("res://Scenes/oyunbitti.tscn");
-		} 
-		GameManager.canglobal=Can;
+			if (string.IsNullOrEmpty(mod))
+			{
+				throw new ArgumentException("Mod kısmı boş olamaz!");
+			}
+			if (deger < 0)
+			{
+				throw new ArgumentOutOfRangeException("item değerleri 0 dan küçü olamaz!");
+			}
+
+			if(mod=="iksir"){
+				GameManager.top_iksir++;
+				Can+=deger;
+			}
+			if (mod=="enemy"){
+				GameManager.top_enemy++;
+				if(MevcutSilah>0){
+					if (MevcutSilah > deger)
+					{
+						MevcutSilah=deger;
+						deger=0;
+					}
+					
+					else
+					{
+						deger-=MevcutSilah;
+						MevcutSilah=0;
+					}
+				}
+				Can-=deger;
+				GameManager.silahglobal=MevcutSilah;
+			}
+			if (Can>20){
+				Can=20;
+			}
+			if (Can <=0)
+			{
+				GameManager.Instance.YeniSkor();
+				GetTree().ChangeSceneToFile("res://Scenes/oyunbitti.tscn");
+			} 
+			GameManager.canglobal=Can;
+		}
+		catch(ArgumentException ex)
+		{
+			GD.PrintErr($"[Hata] Geçersiz mod çağrıldı: {ex.Message} ");
+		}
+		catch(Exception ex)
+		{
+			GD.PrintErr($"[Hata] CanUpdate içerisinde bir hata oluştu: {ex.Message} ");
+		}
+		
 	}
 
 	public void SilahKusan(int silah)
