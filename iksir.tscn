@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://31skmc2yjpes"]
+
+[ext_resource type="Texture2D" uid="uid://yq6ra4te0t0t" path="res://Assets/Dungeon_Tileset.png" id="1_sclut"]
+[ext_resource type="Script" uid="uid://ch1xy2mcimkj6" path="res://Scripts/Iksir.cs" id="2_wbaw8"]
+[ext_resource type="Texture2D" uid="uid://d0pevffouxlox" path="res://Assets/iksir.png" id="3_wbaw8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbaw8"]
+atlas = ExtResource("1_sclut")
+region = Rect2(112, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ikqp"]
+atlas = ExtResource("3_wbaw8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qow5"]
+atlas = ExtResource("1_sclut")
+region = Rect2(112, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdnet"]
+atlas = ExtResource("1_sclut")
+region = Rect2(144, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m262k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbaw8")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ikqp")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qow5")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdnet")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[node name="iksir" type="CharacterBody2D" unique_id=2019246654]
+script = ExtResource("2_wbaw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1596443522]
+
+[node name="iksir" type="Button" parent="CollisionShape2D" unique_id=1841571115]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 6.0
+flat = true
+expand_icon = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1472007556]
+sprite_frames = SubResource("SpriteFrames_m262k")
+animation = &"1"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1140617430]
+offset_left = 3.0
+offset_top = -10.0
+offset_right = 132.0
+offset_bottom = 30.0
+scale = Vector2(0.2, 0.2)
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1897921965]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="enem" type="Label" parent="PanelContainer/MarginContainer" unique_id=168711280]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[connection signal="mouse_entered" from="CollisionShape2D/iksir" to="." method="_on_iksir_mouse_entered"]
+[connection signal="mouse_exited" from="CollisionShape2D/iksir" to="." method="_on_iksir_mouse_exited"]
+[connection signal="pressed" from="CollisionShape2D/iksir" to="." method="_on_iksir_pressed"]
